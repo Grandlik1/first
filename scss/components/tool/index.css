@@ -1,0 +1,18 @@
+.tool .tool-title .title {
+  color: #FFF;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.tool .tool-title .subtitle {
+  color: #C0C0C0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=index.css.map */

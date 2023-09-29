@@ -1,0 +1,609 @@
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Bold"), local("Poppins-Bold"), url("./../fonts/Poppins/Poppins-Bold.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Black Italic"), local("Poppins-BlackItalic"), url("./../fonts/Poppins/Poppins-BlackItalic.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Black"), local("Poppins-Black"), url("./../fonts/Poppins/Poppins-Black.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Medium Italic"), local("Poppins-MediumItalic"), url("./../fonts/Poppins/Poppins-MediumItalic.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins ExtraLight Italic"), local("Poppins-ExtraLightItalic"), url("./../fonts/Poppins/Poppins-ExtraLightItalic.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins SemiBold"), local("Poppins-SemiBold"), url("./../fonts/Poppins/Poppins-SemiBold.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Light Italic"), local("Poppins-LightItalic"), url("./../fonts/Poppins/Poppins-LightItalic.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Regular"), local("Poppins-Regular"), url("./../fonts/Poppins/Poppins-Regular.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Medium"), local("Poppins-Medium"), url("./../fonts/Poppins/Poppins-Medium.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins ExtraBold"), local("Poppins-ExtraBold"), url("./../fonts/Poppins/Poppins-ExtraBold.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Bold Italic"), local("Poppins-BoldItalic"), url("./../fonts/Poppins/Poppins-BoldItalic.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins ExtraBold Italic"), local("Poppins-ExtraBoldItalic"), url("./../fonts/Poppins/Poppins-ExtraBoldItalic.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-ExtraBoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins ExtraLight"), local("Poppins-ExtraLight"), url("./../fonts/Poppins/Poppins-ExtraLight.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Italic"), local("Poppins-Italic"), url("./../fonts/Poppins/Poppins-Italic.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins SemiBold Italic"), local("Poppins-SemiBoldItalic"), url("./../fonts/Poppins/Poppins-SemiBoldItalic.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Light"), local("Poppins-Light"), url("./../fonts/Poppins/Poppins-Light.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Thin Italic"), local("Poppins-ThinItalic"), url("./../fonts/Poppins/Poppins-ThinItalic.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins Thin"), local("Poppins-Thin"), url("./../fonts/Poppins/Poppins-Thin.woff2") format("woff2"), url("./../fonts/Poppins/Poppins-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", "sans-serif";
+}
+body .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background: black;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 20px 24px 32px;
+}
+header .container .logo {
+  max-height: 31px;
+}
+header .container nav {
+  padding: 0 0 0 20px;
+}
+header .container nav ul {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+header .container nav ul li a {
+  color: white;
+  text-decoration: none;
+  margin-right: 32px;
+  font-size: 15px;
+}
+header .container nav ul li button {
+  font-family: "Poppins", "sans-serif";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  color: #000000;
+  padding: 8px 20px 10px;
+  border-radius: 14px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+header .container nav ul li button:hover {
+  background-color: #f0f0f0;
+  color: white;
+}
+
+.banner {
+  font-family: "Poppins", "sans-serif";
+  background: url(./../images/banner.png);
+  height: calc(100vh - 90px);
+  width: 100%;
+  min-height: 800px;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.banner .banner-text .top-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #C0C0C0;
+}
+.banner .banner-text h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 59px;
+  text-align: center;
+  margin: 0 0 16px 0;
+  color: #FFFFFF;
+}
+.banner .banner-text .text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto 4px;
+  padding: 0 0 16px;
+  color: #C0C0C0;
+}
+.banner .banner-icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding-right: 40px;
+}
+.banner .banner-icon :not(:last-child) {
+  margin-right: 16px;
+}
+.banner .banner-icon .icon {
+  padding-bottom: 40px;
+  display: flex;
+}
+.banner .banner-icon .icon img {
+  margin-right: 6px;
+  max-height: 16px;
+}
+.banner .banner-icon .icon p {
+  display: flex;
+  color: white;
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.news {
+  background-color: black;
+  color: white;
+  padding: 140px 0;
+  text-align: center;
+}
+.news .news-title {
+  margin-bottom: 42px;
+  color: #FFF;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+}
+.news .news-title .subtitle {
+  color: #C0C0C0;
+  text-align: center;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.news .blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+.news .blocks .block1 {
+  background-image: url("./../images/IMAGE.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.news .blocks .block2 {
+  background-image: url("./../images/IMAGE-1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.news .blocks .block3 {
+  background-image: url("./../images/IMAGE-2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.news .blocks .block4 {
+  background-image: url("./../images/IMAGE-3.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.news .blocks .block {
+  width: calc(50% - 16px);
+  height: 540px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-content: end;
+  text-align: start;
+  padding: 30px;
+  max-width: 516px;
+  margin: 0 16px 16px 0;
+}
+.news .blocks .block .title {
+  max-width: 500px;
+  margin: 0 auto 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.news .blocks .block .text {
+  color: #C0C0C0;
+  max-width: 500px;
+  margin: 0 auto 16px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.news .blocks .block .read-more {
+  border-radius: 14px;
+  background: #FFF;
+  padding: 11px 26px;
+  max-width: 91px;
+  text-align: center;
+}
+.news .blocks .block .read-more .text {
+  color: black;
+  margin: 0;
+}
+
+.sunset {
+  height: 900px;
+  background-image: url("./../images/bg2.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.sunset .sunset-content {
+  height: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+.sunset .sunset-content .sunset-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 300px;
+}
+.sunset .sunset-content .sunset-wrap .sunset-title {
+  text-align: start;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.sunset .sunset-content .sunset-wrap .sunset-subtitle {
+  color: #C0C0C0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.leaf {
+  background-image: url("./../images/bg4.png");
+}
+
+.star-fall {
+  background-image: url("./../images/bg5.png");
+}
+
+.tool {
+  background-color: black;
+  height: 550px;
+  background-image: url("./../images/bg3.png");
+  background-position: right;
+  background-size: 40vw 100%;
+  background-repeat: no-repeat;
+}
+.tool .tool-content {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  align-items: center;
+}
+.tool .tool-title {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.tool .tool-title .title {
+  color: #FFF;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 16px;
+}
+.tool .tool-title .subtitle {
+  color: #C0C0C0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.tool .tool-title .text {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+.tool .tool-title .button {
+  background-color: white;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  padding: 10px 16px;
+  border-radius: 10px;
+}
+.tool .tool-title .button a {
+  text-decoration: none;
+  color: black;
+}
+
+.past-client {
+  background-color: black;
+  padding: 120px 0;
+}
+.past-client .past-client_title {
+  margin-bottom: 40px;
+}
+.past-client .past-client_title .title {
+  color: #FFF;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+  margin-bottom: 15px;
+}
+.past-client .past-client_title .subtitle {
+  color: #C0C0C0;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.past-client .client {
+  display: flex;
+  justify-content: space-between;
+}
+.past-client .client .logo {
+  margin: auto 0;
+}
+
+.need-help {
+  padding: 120px 0;
+  background-color: black;
+}
+.need-help .need-help_content .title {
+  color: #FFF;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+  max-width: 570px;
+  margin: 0 auto 16px;
+}
+.need-help .need-help_content .subtitle {
+  color: #C0C0C0;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 24px;
+}
+.need-help .need-help_content .button {
+  padding: 12px 24px;
+  background-color: white;
+  max-width: 130px;
+  text-align: center;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+.need-help .need-help_content .button a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+}
+
+footer {
+  border-top: #444444 2px solid;
+  background-color: black;
+  padding: 100px 0;
+}
+footer .footer_content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .footer_content .logo-text {
+  color: #C0C0C0;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+footer .footer-nav {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+footer .footer-nav .nav-title {
+  color: #C0C0C0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+footer .footer-nav .link {
+  list-style: none;
+}
+footer .footer-nav .link a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+footer .footer-nav li:not(:last-child) {
+  margin-bottom: 10px;
+}
+footer .cop {
+  padding-top: 90px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .cop .copyright {
+  color: #C0C0C0;
+}
+footer .cop .social {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .cop .social .logo:not(:last-child) {
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

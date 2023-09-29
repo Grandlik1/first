@@ -1,0 +1,107 @@
+.news {
+  background-color: black;
+  color: white;
+  padding: 140px 0;
+  text-align: center;
+  .news-title{
+    margin-bottom: 42px;
+    color: #FFF;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    .subtitle {
+      color: #C0C0C0;
+      text-align: center;
+      font-size: 23px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+    }
+  }
+  .blocks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    .block1 {
+      background-image: url("./../images/IMAGE.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .block2 {
+      background-image: url("./../images/IMAGE-1.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .block3 {
+      background-image: url("./../images/IMAGE-2.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .block4 {
+      background-image: url("./../images/IMAGE-3.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .block{
+      width: calc(50% - 16px);
+      height: 540px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-content: end;
+      text-align: start;
+      padding: 30px;
+      max-width: 516px;
+      margin:0 16px 16px 0 ;
+      .title{
+        max-width: 500px;
+        margin: 0 auto 10px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+      }
+      .text{
+        color: #C0C0C0;
+        max-width: 500px;
+        margin: 0 auto 16px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
+      .read-more{
+        border-radius: 14px;
+        background: #FFF;
+        padding: 11px 26px;
+        max-width: calc(143px - 52px);
+        text-align: center;
+        .text{
+          color: black;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
