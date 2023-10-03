@@ -97,11 +97,29 @@
         padding: 11px 26px;
         max-width: calc(143px - 52px);
         text-align: center;
+        a{
+          text-decoration: none;
+          color: black;
+        }
+        a:active{
+          color: red;
+          background: #8b8b8b;
+        }
         .text{
+
           color: black;
           margin: 0;
+
         }
+
       }
+      .read-more:hover{
+        background: #c4c4c4;
+      }
+      .read-more:active{
+        background: #8b8b8b;
+      }
+
     }
   }
 }

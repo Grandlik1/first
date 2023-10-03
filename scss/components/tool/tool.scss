@@ -60,6 +60,18 @@
         text-decoration: none;
         color: black;
       }
+      a:hover{
+        color: black;
+      }
+      a:active{
+        color: red;
+      }
+    }
+    .button:hover {
+      background-color: #cbcbcb;
+    }
+    .button:active {
+      background-color: #aaaaaa;
     }
   }
 }

@@ -19,13 +19,26 @@ header{
 
         li{
           a{
+            padding: 8px 20px 10px ;
+            border-radius: 14px;
             color: white;
             text-decoration: none;
             margin-right: 32px;
             font-size: 15px;
           }
+          a:hover{
+            background-color: white;
+            text-decoration: underline;
+            color: black;
+          }
+          a:active{
+            background-color: #d5d5d5;
+            text-decoration: underline;
+            color: black;
+          }
           button{
             //font style
+            border: none;
             font-family: 'Poppins' , 'sans-serif';
             font-style: normal;
             font-size: 16px;
@@ -40,8 +53,8 @@ header{
 
           }
           button:hover {
-            background-color: #f0f0f0;
-            color: white;
+            background-color: #bbbbbb;
+            color: black;
           }
         }
       }
