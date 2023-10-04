@@ -1,0 +1,99 @@
+.blocks-newsLine {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+.blocks-newsLine .block1 {
+  background-image: url("./../images/IMAGE.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.blocks-newsLine .block2 {
+  background-image: url("./../images/IMAGE-1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.blocks-newsLine .block3 {
+  background-image: url("./../images/IMAGE-2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.blocks-newsLine .block4 {
+  background-image: url("./../images/IMAGE-3.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.blocks-newsLine .block {
+  width: calc(50% - 16px);
+  height: 540px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-content: end;
+  text-align: start;
+  padding: 30px;
+  max-width: 516px;
+  margin: 0 16px 16px 0;
+}
+.blocks-newsLine .block .title {
+  max-width: 500px;
+  margin: 0 auto 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.blocks-newsLine .block .text {
+  color: #C0C0C0;
+  max-width: 500px;
+  margin: 0 auto 16px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.blocks-newsLine .block .read-more {
+  border-radius: 14px;
+  background: #FFF;
+  padding: 11px 26px;
+  max-width: 91px;
+  text-align: center;
+}
+.blocks-newsLine .block .read-more a {
+  text-decoration: none;
+  color: black;
+}
+.blocks-newsLine .block .read-more a:active {
+  color: red;
+  background: #8b8b8b;
+}
+.blocks-newsLine .block .read-more .text {
+  color: black;
+  margin: 0;
+}
+.blocks-newsLine .block .read-more:hover {
+  background: #c4c4c4;
+}
+.blocks-newsLine .block .read-more:active {
+  background: #8b8b8b;
+}
+
+/*# sourceMappingURL=index.css.map */

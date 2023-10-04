@@ -94,12 +94,13 @@
       .read-more{
         border-radius: 14px;
         background: #FFF;
-        padding: 11px 26px;
         max-width: calc(143px - 52px);
         text-align: center;
         a{
+          display: block;
           text-decoration: none;
           color: black;
+          padding: 8px;
         }
         a:active{
           color: red;

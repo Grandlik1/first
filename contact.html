@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <marquee behavior="alternate" width="200px" style="color: #FFFFFF; text-align: center; display: flex; justify-content: center; margin: 0 auto;">Welcome</marquee>
+    <div class="container">
+        <div class="logo"><a href="index.html"><img src="./images/Combined-Shape.svg" alt="logo"></a></div>
+        <nav>
+            <ul>
+                <li><a href="">Featured images</a></li>
+                <li><a href="">Gear cage</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Blog</a></li>
+                <li><button class="open-modal-btn">Contact us</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <form action="#">
+                    <div class="form-group">
+                        <div class="name-group">
+                            <div class="first-name">
+                                <label for="first-name">First Name (in English):</label>
+                                <input type="text" class="first-name" name="first-name" >
+                            </div>
+                            <div class="last-name">
+                                <label for="last-name">Last Name (in English):</label>
+                                <input type="text" class="last-name" name="last-name" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" class="phone" name="phone" >
+                        <small>Format: +3800000000000</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="email" name="email" >
+                        <small>Example: example@gmail.com</small>
+                    </div>
+                    <input type="submit" class="submit-btn" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container">\
+        <div class="footer_content">
+            <div class="left-block">
+                <div class="logo">
+                    <img src="./images/logo-compani.svg" alt="logo">
+                </div>
+                <div class="logo-text">
+                    Photographers & videographers capturing the world around us.
+                </div>
+            </div>
+            <div class="right-block">
+                <ul class="footer-nav">
+                    <li><div class="nav-title">Pages</div></li>
+                    <li class="link"><a href="#">Gear cage</a></li>
+                    <li class="link"><a href="#">Featured images</a></li>
+                    <li class="link"><a href="./contact.html">Contact</a></li>
+                    <li class="link"><a href="./blogs.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="email-footer">
+                <div class="description">
+                    <div class="title">Subscribe to our newsletter</div>
+                    <div class="subtitle">Read about all the things we do.</div>
+                </div>
+                <form class="email" id="emailForm">
+                    <input class="email-form" id="email-formID"  type="email" pattern="[a-zA-Z0-9._%+-]+@gmail\.com" placeholder="Email">
+                    <input class=email-submit" id="footer-submit" type="submit" value="Submit">
+
+                </form>
+            </div>
+            <div class="cop">
+                <div class="copyright">© Aperture Photography, Inc. All rights reserved. Licensing</div>
+                <div class="social">
+                    <div class="logo"><a href="#"><img src="./images/twit.svg" alt="logo"></a></div>
+                    <div class="logo"><a href="#"><img src="./images/inst.svg" alt="logo"></a></div>
+                    <div class="logo"><a href="#"><img src="./images/face.svg" alt="logo"></a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal-btn closeModal" id="close-modal-btn">&times;</span>
+        <div class="container">
+            <h2>Contact Form</h2>
+            <form action="#" method="post" class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <div class="name-group">
+                        <div class="first-name">
+                            <label for="first-name">First Name (in English):</label>
+                            <input type="text" id="first-name" name="first-name" >
+                        </div>
+                        <div class="last-name">
+                            <label for="last-name">Last Name (in English):</label>
+                            <input type="text" id="last-name" name="last-name" >
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" >
+                    <small>Format: +3800000000000</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" >
+                    <small>Example: example@gmail.com</small>
+                </div>
+                <input type="submit" id="submit-btn" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/modal-home-page.js"></script>
+</body>
+</html>

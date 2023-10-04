@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+    <link href="style/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <marquee behavior="alternate" width="200px" style="color: #FFFFFF; text-align: center; display: flex; justify-content: center; margin: 0 auto;">Welcome</marquee>
+    <div class="container">
+        <div class="logo"><a href="index.html"><img src="./images/Combined-Shape.svg" alt="logo"></a></div>
+        <nav>
+            <ul>
+                <li><a href="">Featured images</a></li>
+                <li><a href="">Gear cage</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Blog</a></li>
+                <li><button class="open-modal-btn">Contact us</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="article">
+        <div class="container">
+            <div class="article-content">
+                <div class="article-banner"><img src="./images/IMAGE.png" alt="banner"></div>
+                <div class="post-date">15:53, 26 November, 2023 </div>
+                <div class="article-title"> <h1>The Art of Photography: Capturing Moments in Time</h1></div>
+                <div class="article-text">
+                    <p>Photography is a unique and powerful medium that allows us to capture moments in time, freezing them forever in a single frame. Through the lens of a camera, we can tell stories, evoke emotions, and showcase the beauty of the world around us. In this article, we'll explore the significance of photography as an art form and its impact on our lives.</p>
+                    <h3>Capturing Memories and Emotions</h3>
+                    <p>One of the most remarkable aspects of photography is its ability to preserve memories and emotions. A photograph can transport us back to a specific moment, allowing us to relive the joy, sorrow, excitement, or love we felt at that time. It serves as a tangible reminder of the past, triggering a flood of emotions and memories associated with the captured scene.</p>
+                    <h3>The Power of Visual Storytelling</h3>
+                    <p>Photography is a form of visual storytelling. Every photograph has a narrative—a story to tell, a message to convey. Photographers use composition, lighting, and timing to craft a visual story that engages viewers and communicates a message. A well-composed photograph can convey complex ideas, spark conversations, and ignite social change.</p>
+                    <h3>Unveiling Beauty in the Mundane</h3>
+                    <p>Photographers have the remarkable ability to unveil the beauty in everyday moments and ordinary subjects. Through their lenses, mundane scenes can be transformed into extraordinary works of art. Photography encourages us to appreciate the world around us, from the delicate details of a flower to the grandeur of a landscape.</p>
+                    <h3>The Intersection of Art and Technology</h3>
+                    <p>As technology continues to advance, so does the field of photography. Digital cameras, editing software, and social media platforms have revolutionized the way we capture, edit, and share photographs. This intersection of art and technology has broadened the horizons of photography, making it more accessible to people from all walks of life.</p>
+                    <h3>Expression and Creativity</h3>
+                    <p>Photography is a form of self-expression and creativity. Each photographer brings their unique perspective, style, and vision to their work. From abstract and experimental photography to documentary and portrait photography, the possibilities are endless. It allows individuals to express their creativity and showcase their worldview to the world.</p>
+                    <h3>Conclusion</h3>
+                    <p>Photography is more than just taking pictures—it's an art form that speaks to the human experience. It's a way to freeze moments in time, tell compelling stories, and reveal the beauty in the world around us. As we continue to evolve technologically and artistically, the impact and importance of photography in our lives will only grow, allowing us to capture the fleeting moments that make life truly extraordinary.</p>
+                    <button class="return-button" onclick="window.history.back()">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container">\
+        <div class="footer_content">
+            <div class="left-block">
+                <div class="logo">
+                    <img src="./images/logo-compani.svg" alt="logo">
+                </div>
+                <div class="logo-text">
+                    Photographers & videographers capturing the world around us.
+                </div>
+            </div>
+            <div class="right-block">
+                <ul class="footer-nav">
+                    <li><div class="nav-title">Pages</div></li>
+                    <li class="link"><a href="#">Gear cage</a></li>
+                    <li class="link"><a href="#">Featured images</a></li>
+                    <li class="link"><a href="./contact.html">Contact</a></li>
+                    <li class="link"><a href="./blogs.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="email-footer">
+                <div class="description">
+                    <div class="title">Subscribe to our newsletter</div>
+                    <div class="subtitle">Read about all the things we do.</div>
+                </div>
+                <form class="email" id="emailForm">
+                    <input class="email-form" id="email-formID"  type="email" pattern="[a-zA-Z0-9._%+-]+@gmail\.com" placeholder="Email">
+                    <input class=email-submit" id="footer-submit" type="submit" value="Submit">
+
+                </form>
+            </div>
+            <div class="cop">
+                <div class="copyright">© Aperture Photography, Inc. All rights reserved. Licensing</div>
+                <div class="social">
+                    <div class="logo"><a href="#"><img src="./images/twit.svg" alt="logo"></a></div>
+                    <div class="logo"><a href="#"><img src="./images/inst.svg" alt="logo"></a></div>
+                    <div class="logo"><a href="#"><img src="./images/face.svg" alt="logo"></a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal-btn closeModal" id="close-modal-btn">&times;</span>
+        <div class="container">
+            <h2>Contact Form</h2>
+            <form action="#" method="post" class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <div class="name-group">
+                        <div class="first-name">
+                            <label for="first-name">First Name (in English):</label>
+                            <input type="text" id="first-name" name="first-name" >
+                        </div>
+                        <div class="last-name">
+                            <label for="last-name">Last Name (in English):</label>
+                            <input type="text" id="last-name" name="last-name" >
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" >
+                    <small>Format: +3800000000000</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" >
+                    <small>Example: example@gmail.com</small>
+                </div>
+                <input type="submit" id="submit-btn" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/modal-home-page.js"></script>
+</body>
+</html>
