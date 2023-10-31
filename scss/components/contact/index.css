@@ -1,0 +1,27 @@
+.contact-page .modal-content label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.contact-page .modal-content input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.contact-page .modal-content .name-group {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-page .modal-content .name-group .first-name,
+.contact-page .modal-content .name-group .last-name {
+  width: 48%;
+}
+.contact-page #submit-btn {
+  font-family: "Poppins", "sans-serif";
+  font-size: 16px;
+  background-color: white;
+}
+
+/*# sourceMappingURL=index.css.map */

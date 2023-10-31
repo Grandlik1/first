@@ -1,0 +1,94 @@
+.featured-images{
+  background-color: black;
+  padding: 100px 0;
+  h1{
+    color: white;
+    text-align: center;
+  }
+  .slider-container {
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Adjusted width to accommodate three slides */
+  }
+
+  .slide {
+    width: 1000px; /* Set the slide width to match the slider */
+    height: 600px; /* Set the slide height to match the slider */
+    box-sizing: border-box;
+    float: left; /* Float the slides to arrange them horizontally */
+    display: none; /* Hide all slides initially */
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintain image aspect ratio and fit within the container */
+  }
+
+  .slider {
+    height: 100%;
+    width: 100%; /* Ensure the slider takes the full width */
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider .slide:first-child {
+    display: block; /* Show only the first slide */
+  }
+
+  .slider-button {
+    background: white; /* Фон кнопки - белый */
+    color: black; /* Цвет текста - черный */
+    border: none;
+    padding: 0; /* Убираем отступы внутри кнопки */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 24px; /* Увеличиваем размер текста для лучшей видимости */
+    z-index: 1;
+    width: 40px; /* Устанавливаем одинаковую ширину и высоту для круга */
+    height: 40px; /* Устанавливаем одинаковую ширину и высоту для круга */
+    border-radius: 50%; /* Делаем круглую форму кнопки */
+    line-height: 40px; /* Устанавливаем высоту текста по центру */
+    text-align: center; /* Выравниваем текст по центру */
+  }
+
+  .slider-button-prev {
+    left: 0;
+    transform: translateY(-50%);
+    font-weight: bold; /* Увеличиваем толщину стрелочки */
+  }
+
+  .slider-button-next {
+    right: 0;
+    transform: translateY(-50%);
+    font-weight: bold; /* Увеличиваем толщину стрелочки */
+  }
+
+  .slider-button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider-button:hover::before {
+    background: rgba(0, 0, 0, 0.1); /* Изменение фона при наведении */
+  }
+
+  .slider-button:active::before {
+    background: rgba(0, 0, 0, 0.1); /* Изменение фона при нажатии */
+  }
+}

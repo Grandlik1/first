@@ -191,6 +191,28 @@ header .container nav ul li button:hover {
   background-color: #bbbbbb;
   color: black;
 }
+header .user-icon {
+  position: relative;
+  display: inline-block;
+}
+header .user-icon img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+header .user-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+header .user-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
 
 .banner {
   font-family: "Poppins", "sans-serif";
@@ -985,6 +1007,308 @@ footer .cop .social .logo:not(:last-child) {
 }
 .article .return-button:active {
   transform: translateY(2px);
+}
+
+.contact-page {
+  background-color: black;
+}
+.contact-page h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 32px;
+}
+.contact-page .contact-content {
+  padding: 100px 300px;
+}
+.contact-page .contact-content label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  color: white;
+}
+.contact-page small {
+  color: white;
+}
+.contact-page .contact-content input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.contact-page .contact-content .name-group {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-page .form-group {
+  margin-bottom: 32px;
+}
+.contact-page .contact-content .name-group .input-first-name,
+.contact-page .contact-content .name-group .input-last-name {
+  width: 48%;
+}
+.contact-page .submit-btn {
+  font-family: "Poppins", "sans-serif";
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-page .submit-btn:hover {
+  background-color: #333;
+}
+
+.featured-images {
+  background-color: black;
+  padding: 100px 0;
+}
+.featured-images h1 {
+  color: white;
+  text-align: center;
+}
+.featured-images .slider-container {
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+}
+.featured-images .slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%; /* Adjusted width to accommodate three slides */
+}
+.featured-images .slide {
+  width: 1000px; /* Set the slide width to match the slider */
+  height: 600px; /* Set the slide height to match the slider */
+  box-sizing: border-box;
+  float: left; /* Float the slides to arrange them horizontally */
+  display: none; /* Hide all slides initially */
+}
+.featured-images .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintain image aspect ratio and fit within the container */
+}
+.featured-images .slider {
+  height: 100%;
+  width: 100%; /* Ensure the slider takes the full width */
+  overflow: hidden;
+  position: relative;
+}
+.featured-images .slider .slide:first-child {
+  display: block; /* Show only the first slide */
+}
+.featured-images .slider-button {
+  background: white; /* Фон кнопки - белый */
+  color: black; /* Цвет текста - черный */
+  border: none;
+  padding: 0; /* Убираем отступы внутри кнопки */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 24px; /* Увеличиваем размер текста для лучшей видимости */
+  z-index: 1;
+  width: 40px; /* Устанавливаем одинаковую ширину и высоту для круга */
+  height: 40px; /* Устанавливаем одинаковую ширину и высоту для круга */
+  border-radius: 50%; /* Делаем круглую форму кнопки */
+  line-height: 40px; /* Устанавливаем высоту текста по центру */
+  text-align: center; /* Выравниваем текст по центру */
+}
+.featured-images .slider-button-prev {
+  left: 0;
+  transform: translateY(-50%);
+  font-weight: bold; /* Увеличиваем толщину стрелочки */
+}
+.featured-images .slider-button-next {
+  right: 0;
+  transform: translateY(-50%);
+  font-weight: bold; /* Увеличиваем толщину стрелочки */
+}
+.featured-images .slider-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.featured-images .slider-button:hover::before {
+  background: rgba(0, 0, 0, 0.1); /* Изменение фона при наведении */
+}
+.featured-images .slider-button:active::before {
+  background: rgba(0, 0, 0, 0.1); /* Изменение фона при нажатии */
+}
+
+.devices {
+  background-color: black;
+  color: white;
+  padding: 140px 0;
+  text-align: center;
+}
+.devices .devices-title {
+  margin-bottom: 42px;
+  color: #FFF;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+}
+.devices .devices-title .devices-subtitle {
+  color: #ffffff;
+  text-align: center;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 32px;
+}
+
+.devices-subtitle {
+  color: #c1c1c1;
+  text-align: center;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 32px;
+}
+
+.blocks-devices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+.blocks-devices .block1 {
+  background-image: url("./../images/camera.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.blocks-devices .block2 {
+  background-image: url("./../images/lens.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.blocks-devices .block3 {
+  background-image: url("./../images/bag for the camera.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.blocks-devices .block4 {
+  background-image: url("./../images/studio lamps.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.blocks-devices .block {
+  width: calc(30% - 32px);
+  height: 460px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-content: end;
+  text-align: start;
+  padding: 30px;
+  max-width: 516px;
+  margin: 0 12px 16px 0;
+}
+.blocks-devices .block .title {
+  max-width: 500px;
+  margin: 0 auto 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.blocks-devices .block .text {
+  color: #C0C0C0;
+  max-width: 500px;
+  margin: 0 auto 16px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.blocks-devices .block .read-more {
+  border-radius: 14px;
+  background: #FFF;
+  max-width: 91px;
+  text-align: center;
+}
+.blocks-devices .block .read-more a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+}
+.blocks-devices .block .read-more a:active {
+  color: red;
+  background: #8b8b8b;
+}
+.blocks-devices .block .read-more .text {
+  color: black;
+  margin: 0;
+}
+.blocks-devices .block .read-more:hover {
+  background: #c4c4c4;
+}
+.blocks-devices .block .read-more:active {
+  background: #8b8b8b;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0d6aad;
 }
 
 /*# sourceMappingURL=index.css.map */

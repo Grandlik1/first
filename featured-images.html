@@ -22,34 +22,51 @@
     </div>
 </header>
 <main>
-    <div class="contact-page">
-        <div class="container">
-            <div class="contact-content">
-                <form action="#">
-                    <h1>Contact</h1>
+    <div class="featured-images">
+        <div class="slider-container">
+            <button id="prevButton" class="slider-button slider-button-prev" onclick="prevSlide()">&#8249;</button>
+            <div class="slider" id="slider">
+                <div class="slider-wrapper">
+                    <div class="slide"><img src="./images/IMAGE-1.png" alt="Slide 1"></div>
+                    <div class="slide"><img src="./images/IMAGE-2.png" alt="Slide 2"></div>
+                    <div class="slide"><img src="./images/IMAGE-3.png" alt="Slide 3"></div>
+                    <div class="slide"><img src="./images/IMAGE.png" alt="Slide 3"></div>
+
+                </div>
+            </div>
+            <button id="nextButton" class="slider-button slider-button-next" onclick="nextSlide()">&#8250;</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-btn closeModal" id="close-modal-btn">&times;</span>
+            <div class="container">
+                <h2>Contact Form</h2>
+                <form action="#" method="post" class="contact-form" id="contact-form">
                     <div class="form-group">
                         <div class="name-group">
-                            <div class="input-first-name">
+                            <div class="first-name">
                                 <label for="first-name">First Name (in English):</label>
-                                <input type="text" class="first-name" name="first-name" >
+                                <input type="text" id="first-name" name="first-name" >
                             </div>
-                            <div class="input-last-name">
+                            <div class="last-name">
                                 <label for="last-name">Last Name (in English):</label>
-                                <input type="text" class="last-name" name="last-name" >
+                                <input type="text" id="last-name" name="last-name" >
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="tel" class="phone" name="phone" >
+                        <input type="tel" id="phone" name="phone" >
                         <small>Format: +3800000000000</small>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="email" name="email" >
+                        <input type="email" id="email" name="email" >
                         <small>Example: example@gmail.com</small>
                     </div>
-                    <input type="submit" class="submit-btn" value="Submit">
+                    <input type="submit" id="submit-btn" value="Submit">
                 </form>
             </div>
         </div>
@@ -98,39 +115,7 @@
 
     </div>
 </footer>
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal-btn closeModal" id="close-modal-btn">&times;</span>
-        <div class="container">
-            <h2>Contact Form</h2>
-            <form action="#" method="post" class="contact-form" id="contact-form">
-                <div class="form-group">
-                    <div class="name-group">
-                        <div class="first-name">
-                            <label for="first-name">First Name (in English):</label>
-                            <input type="text" id="first-name" name="first-name" >
-                        </div>
-                        <div class="last-name">
-                            <label for="last-name">Last Name (in English):</label>
-                            <input type="text" id="last-name" name="last-name" >
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" >
-                    <small>Format: +3800000000000</small>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" >
-                    <small>Example: example@gmail.com</small>
-                </div>
-                <input type="submit" id="submit-btn" value="Submit">
-            </form>
-        </div>
-    </div>
-</div>
+<script src="./js/slider.js"></script>
 <script src="js/modal-home-page.js"></script>
 </body>
 </html>
