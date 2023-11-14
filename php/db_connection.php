@@ -2,7 +2,7 @@
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$database = "account_user";
+$database = "my_site";
 
 // Подключение к базе данных
 $db = new mysqli($hostname, $username, $password, $database);

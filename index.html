@@ -18,13 +18,19 @@
            <li><a href="./contact.html">Contact</a></li>
             <li><a href="./blogs.html">Blog</a></li>
            <li><button class="open-modal-btn">Contact us</button></li>
-            <li><div class="user-icon">
-                <img src="user-icon.png" alt="User Icon">
-                <div class="user-menu">
-                    <button id="profile-button">Профиль пользователя</button>
-                    <button id="logout-button">Выход</button>
+            <li>
+                <script src="./js/profile_menu.js"></script>
+                <div class="user-icon" onclick="toggleMenu()">
+                    <img src="./images/user_icon_inactive.svg" alt="User Icon" id="userIcon">
+                    <div class="user-menu" id="userMenu">
+                        <!-- Используем JavaScript для динамического управления классами -->
+                        <a href="profile.html" id="profileBtn" class="hidden">Профиль</a>
+                        <a href="./php/logout.php" id="logoutBtn" class="hidden">Выйти</a>
+                        <a href="login.html" id="loginBtn" class="hidden">Войти</a>
+                        <a href="registration.html" id="registerBtn" class="hidden">Зарегистрироваться</a>
+                    </div>
                 </div>
-            </div></li>
+            </li>
         </ul>
     </nav>
     </div>
@@ -230,11 +236,11 @@
                                 <div class="form-group">
                                     <div class="name-group">
                                         <div class="first-name">
-                                            <label for="first-name">First Name (in English):</label>
+                                            <label for="first-name">First Name</label>
                                             <input type="text" id="first-name" name="first-name" >
                                         </div>
                                         <div class="last-name">
-                                            <label for="last-name">Last Name (in English):</label>
+                                            <label for="last-name">Last Name</label>
                                             <input type="text" id="last-name" name="last-name" >
                                         </div>
                                     </div>

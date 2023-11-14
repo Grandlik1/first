@@ -3,8 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <style>
+        .registration  input {
+            margin: 0;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            box-shadow: none;
+            font-size: inherit;
+            line-height: inherit;
+            width: 360px;
+        }
+        .gender {
+            width: 360px;
+            margin: 0 auto;
 
+        }
+        .gender input{
+            width: 16px;
+        }
+        .gender p{
+            font-size: 18px;
+        }
+        .gender label{
+            font-size: 14px;
+        }
+        #favorite_style{
+            padding: 10px;
+            width: 380px;
+        }
+
+        .registration{
+            color: white;
+            background-color: #000000;
+            padding: 90px 0;
+            text-align: center;
+
+        }
+
+        .registration form div{
+                margin-bottom: 16px;
+            }
+        .registration button{
+            padding: 10px;
+            font-weight: bold;
+            width: 380px;
+            border-radius: 14px;
+        }
+        #passwordStrength {
+
+            height: 4px;
+            width: 380px;
+            margin: 4px auto 0;
+        }
+    </style>
+    <script>
+        function validatePassword() {
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Пароли не совпадают. Попробуйте ещё раз.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+    <script>
+        function validateForm() {
+            // Ваш код валидации
+
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let phone = document.getElementById("phone").value;
+
+            // Проверка email
+            if (!validateEmail(email)) {
+                alert("Пожалуйста, введите корректный email.");
+                return false;
+            }
+
+            // Проверка пароля
+            if (!validatePasswordStrength(password)) {
+                alert("Пароль должен быть надежным.");
+                return false;
+            }
+
+            // Проверка номера телефона
+            if (!validatePhoneNumber(phone)) {
+                alert("Пожалуйста, введите корректный номер телефона.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function validateEmail(email) {
+            // Пример простой проверки на наличие @ и точки
+            return email.includes("@") && email.includes(".");
+        }
+
+        function validatePasswordStrength(password) {
+            // Пример проверки сложности пароля
+            let passwordStrength = document.getElementById("passwordStrength");
+
+            if (password.length < 6) {
+                passwordStrength.style.backgroundColor = "red";
+                return false;
+            } else if (password.length < 10) {
+                passwordStrength.style.backgroundColor = "yellow";
+            } else {
+                passwordStrength.style.backgroundColor = "green";
+            }
+
+            return true;
+        }
+
+        function validatePhoneNumber(phone) {
+            // Пример проверки номера телефона
+            return /^\+\d+$/.test(phone);
+        }
+    </script>
+    <script>
+        function validatePasswordStrength(password) {
+            let strength = 0;
+
+            // Проверка длины пароля
+            if (password.length >= 6) {
+                strength++;
+            }
+
+            // Проверка использования букв и цифр
+            if (/[a-zA-Z]/.test(password) && /\d/.test(password)) {
+                strength++;
+            }
+
+            // Проверка использования специальных символов
+            if (/[^a-zA-Z\d]/.test(password)) {
+                strength++;
+            }
+
+            return strength === 3; // Возвращаем true, если пароль считается надежным
+        }
+
+        function updatePasswordStrength() {
+            let password = document.getElementById("password").value;
+            let passwordStrength = document.getElementById("passwordStrength");
+            let isStrongPassword = validatePasswordStrength(password);
+
+            // Отображение сложности
+            if (isStrongPassword) {
+                passwordStrength.style.backgroundColor = "green";
+            } else {
+                passwordStrength.style.backgroundColor = "red";
+            }
+        }
+
+        function validateForm(event) {
+            let password = document.getElementById("password").value;
+            let isStrongPassword = validatePasswordStrength(password);
+
+            if (!isStrongPassword) {
+                alert("Пароль не достаточно надежен.");
+                event.preventDefault(); // Отмена отправки формы
+            }
+        }
+    </script>
 </head>
 <body>
 <header>
@@ -18,26 +184,73 @@
                 <li><a href="./contact.html">Contact</a></li>
                 <li><a href="./blogs.html">Blog</a></li>
                 <li><button class="open-modal-btn">Contact us</button></li>
+                <li>
+                    <script src="./js/profile_menu.js"></script>
+                    <div class="user-icon" onclick="toggleMenu()">
+                        <img src="./images/user_icon_inactive.svg" alt="User Icon" id="userIcon">
+                        <div class="user-menu" id="userMenu">
+                            <!-- Используем JavaScript для динамического управления классами -->
+                            <a href="profile.html" id="profileBtn" class="hidden">Профиль</a>
+                            <a href="./php/logout.php" id="logoutBtn" class="hidden">Выйти</a>
+                            <a href="login.html" id="loginBtn" class="hidden">Войти</a>
+                            <a href="registration.html" id="registerBtn" class="hidden">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </div>
 </header>
 <main>
-    <div class="container">
-        <h1>Регистрация</h1>
-        <form action="php/process_registration.php" method="post">
-            <label for="username">Имя пользователя:</label>
-            <input type="text" id="username" name="username" required><br><br>
+    <div class="registration">
+        <div class="container">
+            <form action="./php/process_registration.php" method="post" onsubmit="return validateForm()">
+                <div>
+                    <p><label for="username">Имя пользователя:</label></p>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div>
+                    <p><label for="email">Email:</label></p>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <p><label for="phone">Телефон:</label></p>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div>
+                    <p><label for="password">Пароль:</label></p>
+                    <input type="password" id="password" name="password" oninput="updatePasswordStrength()" required>
+                    <div id="passwordStrength"></div>
+                </div>
+                <div>
+                <p><label for="confirmPassword">Подтверждение пароля:</label></p>
+                <input type="password" id="confirmPassword" name="confirm_password" required>
+                </div>
+                <div class="gender">
+                    <p>Пол:</p>
+                    <label for="male">Мужской</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="female">Женский</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                </div>
 
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required><br><br>
 
-            <label for="confirm_password">Подтвердите пароль:</label>
-            <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+                <div>
+                    <p><label for="favorite_style">Любимый стиль фотографий:</label></p>
+                    <select id="favorite_style" name="favorite_style" required>
+                        <option value="genre">Жанровая фотография</option>
+                        <option value="journalistic">Журналистская фотография</option>
+                        <option value="artistic">Художественная фотография</option>
+                        <option value="macro">Макрофотография</option>
+                        <option value="street">Уличная фотография</option>
+                    </select>
+                </div>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
 
-            <input type="submit" value="Зарегистрироваться">
-        </form>
+        </div>
     </div>
+
 </main>
 <footer>
     <div class="container">\

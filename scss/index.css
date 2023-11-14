@@ -136,6 +136,11 @@ body .container {
 
 header {
   background: black;
+  /* Стили для внешнего вида иконки пользователя и всплывающего меню */
+  /* Добавили класс hidden для скрытия элементов */
+  /* Добавили стили для видимых элементов */
+  /* Добавляем стили для видимости кнопок при наведении */
+  /* Добавляем стили для кнопок всплывающего меню */
 }
 header .container {
   display: flex;
@@ -191,27 +196,33 @@ header .container nav ul li button:hover {
   background-color: #bbbbbb;
   color: black;
 }
+header .user-menu a.hidden {
+  display: none;
+}
+header .user-menu a.visible {
+  display: block;
+}
 header .user-icon {
   position: relative;
-  display: inline-block;
-}
-header .user-icon img {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
+  margin-left: 17px;
 }
 header .user-menu {
-  display: none;
   position: absolute;
-  top: 40px;
-  right: 0;
-  background: #fff;
-  border: 1px solid #ccc;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #FFFFFF; /* Добавляем белую обводку в 1 пиксель */
+  display: none;
 }
-header .user-menu button {
+header .user-icon:hover .user-menu {
   display: block;
-  width: 100%;
-  text-align: left;
+}
+header .user-menu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 .banner {

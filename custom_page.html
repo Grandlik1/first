@@ -3,8 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="style/style.css" rel="stylesheet">
+    <style>
+        #contextMenu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        #contextMenu button {
+            display: block;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        #costForm {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+        }
+        #costForm label:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    </style>
 </head>
 <body>
+<header>
+    <marquee behavior="alternate" width="200px" style="color: #FFFFFF; text-align: center; display: flex; justify-content: center; margin: 0 auto;">Welcome</marquee>
+    <div class="container">
+        <div class="logo"><a href="index.html"><img src="./images/Combined-Shape.svg" alt="logo"></a></div>
+        <nav>
+            <ul>
+                <li><a href="./featured-images.html">Featured images</a></li>
+                <li><a href="./devices.html">Gear cage</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./blogs.html">Blog</a></li>
+                <li><button class="open-modal-btn">Contact us</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <main oncontextmenu="showContextMenu(event)">
+        <div class="container">
+            <img id="mainImage" src="./images/admin.png" alt="">
+            <p id="datetime"></p>
+            <form id="costForm">
+                <label>
+                    Расчетное время аренды фотографа (за 1 час 500 гривен):
+                    <input type="number" id="rentalTime" min="1" value="1">
+                </label>
 
+                <label>
+                    Место съемки:
+                    <input type="radio" name="location" value="100" checked> Студия (100 грн)
+                    <input type="radio" name="location" value="200"> Улица (200 грн)
+                </label>
+
+                <label>
+                    Печать фото:
+                    <input type="radio" name="print" value="100" checked> Да (100 грн)
+                    <input type="radio" name="print" value="0"> Нет
+                </label>
+
+                <button type="button" onclick="calculateCost()">Рассчитать стоимость</button>
+
+                <p id="totalCost"></p>
+            </form>
+
+            <div id="contextMenu">
+                <button onclick="changeColor()">Изменить цвет</button>
+                <button onclick="changeFontSize()">Изменить размер шрифта</button>
+                <button onclick="toggleImages()">Скрыть/Показать картинки</button>
+                <button onclick="toggleBlock('costForm')">Скрыть/Показать расчет</button>
+                <button onclick="toggleBlock('datetime')">Скрыть/Показать время</button>
+                <button onclick="changeImage()">Сменить изображение</button>
+            </div>
+            <script>
+                document.addEventListener("contextmenu", showContextMenu);
+
+                function showContextMenu(event) {
+                    event.preventDefault();
+                    let contextMenu = document.getElementById("contextMenu");
+                    contextMenu.style.display = "block";
+                    contextMenu.style.left = event.pageX + "px";
+                    contextMenu.style.top = event.pageY + "px";
+
+                    document.addEventListener("click", hideContextMenu);
+                }
+
+                function hideContextMenu() {
+                    let contextMenu = document.getElementById("contextMenu");
+                    contextMenu.style.display = "none";
+                    document.removeEventListener("click", hideContextMenu);
+                }
+
+                function changeColor() {
+                    document.body.style.backgroundColor = prompt("Введите цвет (например, red):");
+                }
+
+                function changeFontSize() {
+                    // Запрос у пользователя нового размера шрифта (без добавления "px")
+                    let newSize = prompt("Введите новый размер шрифта (например, 16):");
+
+                    // Проверка наличия введенного значения
+                    if (newSize !== null && newSize !== "") {
+                        // Получаем ссылку на элемент <main> и устанавливаем новый размер шрифта
+                        let mainElement = document.querySelector("main");
+                        mainElement.style.fontSize = newSize + "px";
+                    }
+                }
+
+                function toggleImages() {
+                    let images = document.querySelectorAll("img");
+                    for (let i = 0; i < images.length; i++) {
+                        images[i].style.display = (images[i].style.display === "none") ? "block" : "none";
+                    }
+                }
+
+                function toggleBlock(blockId) {
+                    let block = document.getElementById(blockId);
+                    block.style.display = (block.style.display === "none") ? "block" : "none";
+                }
+
+                function changeImage() {
+                    let imagePaths = [
+                        "images/admin.png",
+                        "images/IMAGE-1.png",
+                        "images/IMAGE-2.png"
+                    ];
+
+                    let imageNumber = prompt("Введите номер изображения (1, 2 или 3):");
+
+                    if (imageNumber >= 1 && imageNumber <= 3) {
+                        document.getElementById("mainImage").src = imagePaths[imageNumber - 1];
+                    } else {
+                        alert("Доступны только изображения с номерами 1, 2 и 3.");
+                    }
+                }
+
+                function updateDateTime() {
+                    let currentDateTime = new Date();
+                    let formattedDateTime = currentDateTime.toLocaleString();
+                    document.getElementById("datetime").innerText = formattedDateTime;
+                }
+
+                window.onload = function () {
+                    setInterval(updateDateTime, 1000);
+                };
+
+                function calculateCost() {
+                    alert("Расчет стоимости");
+                }
+            </script>
+
+            <script>
+                function calculateCost() {
+                    // Получаем значения из формы
+                    let rentalTime = parseInt(document.getElementById("rentalTime").value, 10);
+                    let locationCost = parseInt(document.querySelector('input[name="location"]:checked').value, 10);
+                    let printCost = parseInt(document.querySelector('input[name="print"]:checked').value, 10);
+
+                    // Рассчитываем стоимость
+                    let totalCost = rentalTime * 500 + locationCost + printCost;
+
+                    // Выводим итоговую стоимость на страницу
+                    document.getElementById("totalCost").innerText = "Итоговая стоимость: " + totalCost + " грн";
+                }
+            </script>
+            <script>
+                function updateDateTime() {
+                    // Создаем объект для текущей даты и времени
+                    let currentDateTime = new Date();
+
+                    // Форматируем дату и время
+                    let formattedDateTime = currentDateTime.toLocaleString();
+
+                    // Выводим на страницу
+                    document.getElementById("datetime").innerText = formattedDateTime;
+                }
+
+                // Обновляем время при загрузке страницы
+                window.onload = function () {
+                    updateDateTime();
+                };
+
+                // Обновляем время каждую секунду (1000 миллисекунд)
+                setInterval(updateDateTime, 1000);
+            </script>
+        </div>
+
+</main>
+<footer>
+    <div class="container">\
+        <div class="footer_content">
+            <div class="left-block">
+                <div class="logo">
+                    <img src="./images/logo-compani.svg" alt="logo">
+                </div>
+                <div class="logo-text">
+                    Photographers & videographers capturing the world around us.
+                </div>
+            </div>
+            <div class="right-block">
+                <ul class="footer-nav">
+                    <li><div class="nav-title">Pages</div></li>
+                    <li class="link"><a href="#">Gear cage</a></li>
+                    <li class="link"><a href="#">Featured images</a></li>
+                    <li class="link"><a href="./contact.html">Contact</a></li>
+                    <li class="link"><a href="./blogs.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="email-footer">
+                <div class="description">
+                    <div class="title">Subscribe to our newsletter</div>
+                    <div class="subtitle">Read about all the things we do.</div>
+                </div>
+                <form class="email" id="emailForm">
+                    <input class="email-form" id="email-formID"  type="email" pattern="[a-zA-Z0-9._%+-]+@gmail\.com" placeholder="Email">
+                    <input class=email-submit" id="footer-submit" type="submit" value="Submit">
+
+                </form>
+            </div>
+            <div class="cop">
+                <div class="copyright">© Aperture Photography, Inc. All rights reserved. Licensing</div>
+                <div class="social">
+                    <div class="logo"><a href="#"><img src="./images/twit.svg" alt="logo"></a></div>
+                    <div class="logo"><a href="#"><img src="./images/inst.svg" alt="logo"></a></div>
+                    <div class="logo"><a href="#"><img src="./images/face.svg" alt="logo"></a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
 </body>
 </html>

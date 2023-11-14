@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $servername = "localhost"; // Стандартный хост (локальный сервер)
     $username = "root"; // Стандартное имя пользователя (обычно root для локального сервера)
     $password = ""; // Пароль (обычно пустой для локального сервера)
-    $dbname = "article"; // Название базы данных (article)
+    $dbname = "my_site"; // Название базы данных (article)
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -39,5 +39,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Закрытие соединения с базой данных
-    $conn->close();
 }

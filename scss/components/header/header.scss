@@ -61,29 +61,43 @@ header{
     }
 
   }
-  .user-icon {
-    position: relative;
-    display: inline-block;
+  /* Стили для внешнего вида иконки пользователя и всплывающего меню */
+  /* Добавили класс hidden для скрытия элементов */
+  .user-menu a.hidden {
+    display: none;
   }
 
-  .user-icon img {
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
+  /* Добавили стили для видимых элементов */
+  .user-menu a.visible {
+    display: block;
+  }
+  .user-icon {
+    position: relative;
+    margin-left: 17px;
+
   }
 
   .user-menu {
-    display: none;
     position: absolute;
-    top: 40px;
-    right: 0;
-    background: #fff;
-    border: 1px solid #ccc;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #FFFFFF; /* Добавляем белую обводку в 1 пиксель */
+    display: none;
   }
 
-  .user-menu button {
+  /* Добавляем стили для видимости кнопок при наведении */
+  .user-icon:hover .user-menu {
     display: block;
-    width: 100%;
-    text-align: left;
   }
+
+  /* Добавляем стили для кнопок всплывающего меню */
+  .user-menu a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+
 }
