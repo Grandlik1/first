@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="style/style.css" rel="stylesheet">
+    <style>
+        .article-create{
+            background-color: black;
+            color: white;
+            padding: 90px 0;
+        }
+        .article-form{
+         width: 400px;
+         margin: 0 auto;
+        }
+        .article_submit{
+            width: 400px;
+            padding: 10px;
+            color: black;
+            background-color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 14px;
+        }
+        textarea{
+            width: 400px;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -35,23 +58,27 @@
     </div>
 </header>
 <main>
-    <div class="container">
-        <div class="article-form">
-            <form action="./php/process_add_article.php" method="post" enctype="multipart/form-data">
-                <label for="title">Заголовок статьи:</label>
-                <input type="text" id="title" name="title" required><br><br>
+    <div class="article-create">
+        <div class="container">
+            <div class="article-form">
+                <h1>Создание статьи</h1>
+                <form action="./php/process_add_article.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Заголовок статьи:</label>
+                    <input type="text" id="title" name="title" required><br><br>
 
-                <label for="content">Содержание статьи:</label><br>
-                <textarea id="content" name="content" rows="10" required></textarea><br><br>
+                    <label for="content">Содержание статьи:</label><br>
+                    <textarea id="content" name="content" rows="10" required></textarea><br><br>
 
-                <!-- Элемент для выбора изображения -->
-                <label for="image">Изображение:</label>
-                <input type="file" id="image" name="image" accept="image/*" required><br><br>
+                    <!-- Элемент для выбора изображения -->
+                    <label for="image">Изображение:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required><br><br>
 
-                <input type="submit" value="Добавить статью">
-            </form>
+                    <input class="article_submit" type="submit" value="Добавить статью">
+                </form>
+            </div>
         </div>
     </div>
+
 
 </main>
 <footer>

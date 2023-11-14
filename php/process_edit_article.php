@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($conn->query($sql) === TRUE) {
             // После успешного обновления, перенаправьте пользователя на страницу редактирования этой статьи
-            header("Location: edit_article.php?id=$article_id");
+            header("Location: first/php/edit_article.php?id=$article_id");
             exit();
         } else {
             echo "Ошибка: " . $sql . "<br>" . $conn->error;

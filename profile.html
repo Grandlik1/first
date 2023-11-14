@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="style/style.css" rel="stylesheet">
+    <style>
+        .profile_content{
+            background-color: #000000;
+            padding: 120px 0;
+        }
+        .profile_link{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .profile_link a{
+            text-decoration: none;
+            font-size: 32px;
+            color: white;
+        }
+        .profile_link a:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+    </style>
 </head>
 <body>
 <header>
@@ -35,13 +56,13 @@
     </div>
 </header>
 <main>
-    <div>
+    <div class="profile_content">
         <div class="container">
             <div>
                 <div><img src="" alt=""></div>
                 <div></div>
             </div>
-            <div>
+            <div class="profile_link">
                 <a href="./add_article.html">добавить статью</a>
                 <a href="./php/article_list.php">список статей</a>
                 <a href="./custom_page.html">Страница с расчетами и изменяемым контентом</a>
